@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap')
+
+*
+  align-items: center
+  box-sizing: border-box
+  color: #CCC
+  font-family: 'Roboto Mono', monospace
+  outline: none
+  transition: 0.2s
+
+html, body
+  align-items: center
+  background-color: #222
+  display: flex
+  flex-direction: column
+  height: 100%
+  justify-items: center
+  width: 100%
+
+div.spacer
+  flex-grow: 1
+
+#ls-cmd
+  font-size: calc(1.5em + 2vw)
+
+#ls-output
+  width: 75%
+  padding-left: 5em
+  padding-right: 5em
+  margin-bottom: 5em
+  tbody
+    tr
+      margin-top: 2em
+      margin-bottom: 2em
+      td
+        a
+          font-size: calc(1em + 0.5vw)
+          margin-left: 2em
+          margin-right: 2em
+  
+          &.active
+            color: #EA9
+
+          &:hover
+            &.active
+              color: #EA9
+            color: #9AE
+  
+
+p
+  max-width: 100%
+  font-size: calc(1em + 0.5vw)
+
+#about
+  display: flex
+  flex-direction: column
+  width: 60%
+
+@keyframes fade-out
+  from
+    opacity: 1
+  to
+    opacity: 0
+
+.fade-out
+  animation: fade-out ease-out 0.1s forwards
+  transition: 0.1s
+
+@keyframes fade-in
+  from
+    opacity: 0
+  to
+    opacity: 1
+
+.fade-in
+  animation: fade-in ease-in 0.1s forwards
+  transition: 0.1s
+
+section
+  display: flex
+  flex-direction: column
+  max-width: 60%
